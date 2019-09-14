@@ -1,0 +1,11 @@
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.deps.json
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.runtimeconfig.json
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.runtimeconfig.dev.json
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.dll
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.pdb
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.csprojAssemblyReference.cache
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.csproj.CoreCompileInputs.cache
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.AssemblyInfoInputs.cache
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.AssemblyInfo.cs
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.dll
+D:\03_Project\Laboratory\CShapeLaboratory\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.pdb

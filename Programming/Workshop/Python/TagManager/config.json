@@ -1,0 +1,11 @@
+{
+    "Music" : {
+        "RootPath": "F:\\TagMusic",
+        "Tags" : {
+          "singers" : "set",
+          "language" : "item",
+          "favor" : "item",
+          "tags" : "set"
+        }
+    }
+}

@@ -1,0 +1,79 @@
+
+  Id CommandLine
+  -- -----------
+   1 F:
+   2 cd F:\PersonalResources\Programming\Laboratory\Powershell\00_GettingStarted
+   3 get-verb |more
+   4 $PSVersionTable
+   5 get-verb -verb set |more
+   6 get-verb -verb set |format-list
+   7 get-verb -group security
+   8 get-verb -group se*
+   9 get-verb -group se
+  10 get-service
+  11 get-service |more
+  12 get-service -name m*
+  13 get-verb -group security
+  14 get-verb -group s*
+  15 get-verb -verb b*
+  16 get-service -name m*
+  17 get-service -name m* -ComputerName Client01,DC01
+  18 $PSVersionTable
+  19 get-service -name m*
+  20 get-alias |more
+  21 get-alias |more
+  22 get-alias |more
+  23 get-alias -namr r*
+  24 get-alias -namr rm
+  25 get-alias -name rm
+  26 get-alias -name r*
+  27 get-alias -definition *service*
+  28 get-alias -name r* |format-list
+  29 get-alias -name rm |format-list
+  30 git-service -name m*
+  31 Get-Service -name m* |format-list
+  32 gsv -name m*
+  33 help gsv
+  34 get-command
+  35 get-command |more
+  36 get-command -name add-apppackage
+  37 get-command -name add-apppackage |format-list
+  38 get-command -verb get
+  39 get-command -name add-apppackage |format-list
+  40 get-verb |more
+  41 get-command -name add-apppackage |format-list
+  42 get-command -verb get -noun *dns*
+  43 get-command -name *fire*
+  44 get-command -name *fire* -commandtype function
+  45 get-help -name get-command
+  46 get-help -name get-command -detailed
+  47 man -name get-command
+  48 get-help -name get-command -detailed
+  49 get-help -name get-command
+  50 get-help |more
+  51 get-help -name *dns*
+  52 get-help -name *dns*
+  53 get-help
+  54 get-help *service* |more
+  55 get-help *service* 
+  56 update-help
+  57 cls
+  58 help *about*
+  59 help get-command
+  60 get-command |more
+  61 get-command -verb new*
+  62 get-command -verb new
+  63 get-command -commandtype function | measure-object
+  64 get-command -name *ip*
+  65 get-command -name ip
+  66 get-command -name *ip*
+  67 get-command -name *ip* -module net*
+  68 get-command -name *ip* -module nettcpip
+  69 get-command -name *ip* -module nettc
+  70 get-command -name *ip* -module nettc*
+  71 Get-NetIPAddress
+  72 get-alias -name md
+  73 md transcripts
+  74 get-history
+  75 get-command -commandtype function | measure-object
+

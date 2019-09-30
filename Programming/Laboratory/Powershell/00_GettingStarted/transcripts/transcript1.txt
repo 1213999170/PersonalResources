@@ -1,0 +1,201 @@
+**********************
+PowerShell transcript start
+Start time: 20190930164121
+Username: FAREAST\minzlu
+RunAs User: FAREAST\minzlu
+Configuration Name: 
+Machine: MINZLU-WORK01 (Microsoft Windows NT 10.0.18362.0)
+Host Application: C:\Program Files\PowerShell\6\pwsh.dll -WorkingDirectory ~
+Process ID: 35184
+PSVersion: 6.2.3
+PSEdition: Core
+GitCommitId: 6.2.3
+OS: Microsoft Windows 10.0.18362 
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.2.3
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\transcripts\transcript1.txt
+PS F:\PersonalResources\Programming\Laboratory\Powershell\00_GettingStarted> get-service | where-object -property status -eq stopped
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  AarSvc_991ac       Agent Activation Runtime_991ac
+Stopped  AJRouter           AllJoyn Router Service
+Stopped  ALG                Application Layer Gateway Service
+Stopped  AppMgmt            Application Management
+Stopped  AppReadiness       App Readiness
+Stopped  AppVClient         Microsoft App-V Client
+Stopped  AppXSvc            AppX Deployment Service (AppXSVC)
+Stopped  aspnet_state       ASP.NET State Service
+Stopped  AssignedAccessMan… AssignedAccessManager Service
+Stopped  autotimesvc        Cellular Time
+Stopped  AxInstSV           ActiveX Installer (AxInstSV)
+Stopped  BcastDVRUserServi… GameDVR and Broadcast User Service_99…
+Stopped  BluetoothUserServ… Bluetooth User Support Service_991ac
+Stopped  BTAGService        Bluetooth Audio Gateway Service
+Stopped  bthserv            Bluetooth Support Service
+Stopped  c2wts              Claims to Windows Token Service
+Stopped  CaptureService_99… CaptureService_991ac
+Stopped  ClipSVC            Client License Service (ClipSVC)
+Stopped  CmRcService        Configuration Manager Remote Control
+Stopped  COMSysApp          COM+ System Application
+Stopped  ConsentUxUserSvc_… ConsentUX_991ac
+Stopped  CredentialEnrollm… CredentialEnrollmentManagerUserSvc_99…
+Stopped  debugregsvc        debugregsvc
+Stopped  defragsvc          Optimize drives
+Stopped  DeveloperToolsSer… Developer Tools Service
+Stopped  DeviceAssociation… DeviceAssociationBroker_991ac
+Stopped  DeviceAssociation… Device Association Service
+Stopped  DeviceInstall      Device Install Service
+Stopped  DevicePickerUserS… DevicePicker_991ac
+Stopped  DevicesFlowUserSv… DevicesFlow_991ac
+Stopped  DevQueryBroker     DevQuery Background Discovery Broker
+Stopped  diagnosticshub.st… Microsoft (R) Diagnostics Hub Standar…
+Stopped  diagsvc            Diagnostic Execution Service
+Stopped  DmEnrollmentSvc    Device Management Enrollment Service
+Stopped  DsmSvc             Device Setup Manager
+Stopped  edgeupdate         Microsoft Edge Update Service (edgeup…
+Stopped  edgeupdatem        Microsoft Edge Update Service (edgeup…
+Stopped  EFS                Encrypting File System (EFS)
+Stopped  embeddedmode       Embedded Mode
+Stopped  EntAppSvc          Enterprise App Management Service
+Stopped  Fax                Fax
+Stopped  fdPHost            Function Discovery Provider Host
+Stopped  FDResPub           Function Discovery Resource Publicati…
+Stopped  fhsvc              File History Service
+Stopped  FontCache3.0.0.0   Windows Presentation Foundation Font …
+Stopped  FrameServer        Windows Camera Frame Server
+Stopped  GoogleChromeEleva… Google Chrome Elevation Service
+Stopped  GraphicsPerfSvc    GraphicsPerfSvc
+Stopped  gupdate            Google Update Service (gupdate)
+Stopped  gupdatem           Google Update Service (gupdatem)
+Stopped  icssvc             Windows Mobile Hotspot Service
+Stopped  Intel(R) Capabili… Intel(R) Capability Licensing Service…
+Stopped  IpxlatCfgSvc       IP Translation Configuration Service
+Stopped  KtmRm              KtmRm for Distributed Transaction Coo…
+Stopped  lltdsvc            Link-Layer Topology Discovery Mapper
+Stopped  lpasvc             Microsoft Policy Platform Local Autho…
+Stopped  lppsvc             Microsoft Policy Platform Processor
+Stopped  LxpSvc             Language Experience Service
+Stopped  MapsBroker         Downloaded Maps Manager
+Stopped  MessagingService_… MessagingService_991ac
+Stopped  MicrosoftEdgeBeta… Microsoft Edge Beta Elevation Service
+Stopped  MicrosoftEdgeDevE… Microsoft Edge Dev Elevation Service
+Stopped  MSDTC              Distributed Transaction Coordinator
+Stopped  MSiSCSI            Microsoft iSCSI Initiator Service
+Stopped  msiserver          Windows Installer
+Stopped  NaturalAuthentica… Natural Authentication
+Stopped  NcaSvc             Network Connectivity Assistant
+Stopped  NcdAutoSetup       Network Connected Devices Auto-Setup
+Stopped  Net Driver HPZ12   Net Driver HPZ12
+Stopped  Netman             Network Connections
+Stopped  NetSetupSvc        Network Setup Service
+Stopped  NetTcpPortSharing  Net.Tcp Port Sharing Service
+Stopped  ose64              Office 64 Source Engine
+Stopped  p2pimsvc           Peer Networking Identity Manager
+Stopped  p2psvc             Peer Networking Grouping
+Stopped  perceptionsimulat… Windows Perception Simulation Service
+Stopped  PerfHost           Performance Counter DLL Host
+Stopped  pla                Performance Logs & Alerts
+Stopped  Pml Driver HPZ12   Pml Driver HPZ12
+Stopped  PNRPAutoReg        PNRP Machine Name Publication Service
+Stopped  PNRPsvc            Peer Name Resolution Protocol
+Stopped  PrintNotify        Printer Extensions and Notifications
+Stopped  PrintWorkflowUser… PrintWorkflow_991ac
+Stopped  PushToInstall      Windows PushToInstall Service
+Stopped  QWAVE              Quality Windows Audio Video Experience
+Stopped  RasAuto            Remote Access Auto Connection Manager
+Stopped  RemoteAccess       Routing and Remote Access
+Stopped  RemoteRegistry     Remote Registry
+Stopped  RetailDemo         Retail Demo Service
+Stopped  RmSvc              Radio Management Service
+Stopped  RpcLocator         Remote Procedure Call (RPC) Locator
+Stopped  ScDeviceEnum       Smart Card Device Enumeration Service
+Stopped  SCPolicySvc        Smart Card Removal Policy
+Stopped  SDRSVC             Windows Backup
+Stopped  seclogon           Secondary Logon
+Stopped  SensorDataService  Sensor Data Service
+Stopped  SensorService      Sensor Service
+Stopped  SensrSvc           Sensor Monitoring Service
+Stopped  SharedAccess       Internet Connection Sharing (ICS)
+Stopped  SharedRealitySvc   Spatial Data Service
+Stopped  shpamsvc           Shared PC Account Manager
+Stopped  smphost            Microsoft Storage Spaces SMP
+Stopped  smstsmgr           ConfigMgr Task Sequence Agent
+Stopped  SNMPTRAP           SNMP Trap
+Stopped  spectrum           Windows Perception Service
+Stopped  sppsvc             Software Protection
+Stopped  ssh-agent          OpenSSH Authentication Agent
+Stopped  sshd               OpenSSH SSH Server
+get-service : Service 'SshdBroker (SshdBroker)' cannot be queried due to the following error: 
+At line:1 char:1
++ get-service | where-object -property status -eq stopped
++ ~~~~~~~~~~~
++ CategoryInfo          : PermissionDenied: (System.ServiceProcess.ServiceController:ServiceController) [Get-Service], ServiceCommandException
++ FullyQualifiedErrorId : CouldNotGetServiceInfo,Microsoft.PowerShell.Commands.GetServiceCommand
+get-service : Service 'SshdBroker (SshdBroker)' cannot be queried due to the following error:
+At line:1 char:1
++ get-service | where-object -property status -eq stopped
++ ~~~~~~~~~~~
++ CategoryInfo          : PermissionDenied: (System.ServiceProcess.ServiceController:ServiceController) [Get-Service], ServiceCommandException
++ FullyQualifiedErrorId : CouldNotGetServiceInfo,Microsoft.PowerShell.Commands.GetServiceCommand
+
+Stopped  SshdBroker         SshdBroker
+Stopped  Steam Client Serv… Steam Client Service
+Stopped  stisvc             Windows Image Acquisition (WIA)
+Stopped  svsvc              Spot Verifier
+Stopped  swprv              Microsoft Software Shadow Copy Provid…
+Stopped  TapiSrv            Telephony
+Stopped  TieringEngineServ… Storage Tiers Management
+Stopped  TroubleshootingSvc Recommended Troubleshooting Service
+Stopped  TrustedInstaller   Windows Modules Installer
+Stopped  tzautoupdate       Auto Time Zone Updater
+Stopped  UevAgentService    User Experience Virtualization Service
+Stopped  upnphost           UPnP Device Host
+Stopped  VacSvc             Volumetric Audio Compositor Service
+Stopped  vmicguestinterface Hyper-V Guest Service Interface
+Stopped  vmicheartbeat      Hyper-V Heartbeat Service
+Stopped  vmickvpexchange    Hyper-V Data Exchange Service
+Stopped  vmicrdv            Hyper-V Remote Desktop Virtualization…
+Stopped  vmicshutdown       Hyper-V Guest Shutdown Service
+Stopped  vmictimesync       Hyper-V Time Synchronization Service
+Stopped  vmicvmsession      Hyper-V PowerShell Direct Service
+Stopped  vmicvss            Hyper-V Volume Shadow Copy Requestor
+Stopped  VSS                Volume Shadow Copy
+Stopped  VSStandardCollect… Visual Studio Standard Collector Serv…
+Stopped  WaaSMedicSvc       Windows Update Medic Service
+Stopped  WalletService      WalletService
+Stopped  WarpJITSvc         WarpJITSvc
+Stopped  wbengine           Block Level Backup Engine Service
+Stopped  wcncsvc            Windows Connect Now - Config Registrar
+Stopped  WdiSystemHost      Diagnostic System Host
+Stopped  WebManagement      Web Management
+Stopped  Wecsvc             Windows Event Collector
+Stopped  WEPHOSTSVC         Windows Encryption Provider Host Serv…
+Stopped  wercplsupport      Problem Reports and Solutions Control…
+Stopped  WerSvc             Windows Error Reporting Service
+Stopped  WFDSConMgrSvc      Wi-Fi Direct Services Connection Mana…
+Stopped  WiaRpc             Still Image Acquisition Events
+Stopped  wisvc              Windows Insider Service
+Stopped  WlanSvc            WLAN AutoConfig
+Stopped  wlidsvc            Microsoft Account Sign-in Assistant
+Stopped  wlpasvc            Local Profile Assistant Service
+Stopped  WManSvc            Windows Management Service
+Stopped  wmiApSrv           WMI Performance Adapter
+Stopped  WMPNetworkSvc      Windows Media Player Network Sharing …
+Stopped  workfolderssvc     Work Folders
+Stopped  WpcMonSvc          Parental Controls
+Stopped  WPDBusEnum         Portable Device Enumerator Service
+Stopped  XblAuthManager     Xbox Live Auth Manager
+Stopped  XblGameSave        Xbox Live Game Save
+Stopped  XboxGipSvc         Xbox Accessory Management Service
+Stopped  XboxNetApiSvc      Xbox Live Networking Service
+
+PS F:\PersonalResources\Programming\Laboratory\Powershell\00_GettingStarted> stop-transcript
+**********************
+PowerShell transcript end
+End time: 20190930174917
+**********************

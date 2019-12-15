@@ -10,6 +10,7 @@ Programming/Workshop/Powershell/ScopeTools/History/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+Programming/Workshop/AI/mnist_test/dataset/
 
 # Build results
 [Dd]ebug/

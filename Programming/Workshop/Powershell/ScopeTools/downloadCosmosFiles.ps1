@@ -1,5 +1,5 @@
 param(
-    [string] $listTableFile = "downloadCosmosFileList.csv"
+    [string] $listTableFile = ".\Data\downloadCosmosFileList.csv"
 )
 
 . "$PSScriptRoot\Lib\variables.ps1"
@@ -12,7 +12,7 @@ foreach ($line in Get-Content $listTableFile) {
     }
     
     $cosmosFile, $localFile = $line.Split(',');
-    $ret_print = DownloadCosmosFile($cosmosFile, $localFile);
+    $ret_print = DownloadCosmosFile $cosmosFile $localFile
     Write-Output $ret_print
 }
 

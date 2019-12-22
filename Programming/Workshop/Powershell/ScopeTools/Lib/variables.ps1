@@ -13,7 +13,7 @@ $VCMap = @{
 
 function GetVC([string]$VCDescr) {
     $VCDescr = $VCDescr.ToLower();
-	if ($VCDescr.Contains("11")) {
+    if ($VCDescr.Contains("11")) {
         if ($VCDescr.Contains("pr")) {
             return $VCMap["11prod"];
         }
@@ -31,11 +31,31 @@ function GetVC([string]$VCDescr) {
     }
 }
 
-$ScopeRoot = "D:\Repos\Ads.BI.SubjectAreas\target\distrib\debug\amd64\Autopilot\ScopeSDK";
-$ScopeExe = "$ScopeRoot\Scope.exe";
 
-$CommandHistoryFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\History\Commands.txt";
-$CommandPrintHistoryFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\History\CommandPrints.txt";
-$PrintHistoryFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\History\Prints.txt";
+<#
+    Local paths
+#>
+$ScopeRoot = "D:\Repos\Ads.BI.SubjectAreas\target\distrib\debug\amd64\Autopilot\ScopeSDK"
+$VSScopeRoot = """C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\ScopeStudio\2.5.0000.4\CosmosRuntimeSDK"""
+$ScopeExe = "$ScopeRoot\Scope.exe"
 
-$CookiesFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\Cookies\cookies.json";
+$CommandHistoryFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\History\Commands.txt"
+$CommandPrintHistoryFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\History\CommandPrints.txt"
+$PrintHistoryFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\History\Prints.txt"
+
+$CookiesFile = "F:\PersonalResources\Programming\Workshop\Powershell\ScopeTools\Cookies\cookies.json"
+
+<#
+    System config
+#>
+$PathDelimiters = "/", "\"
+$ExtDelimiter = "."
+
+$UserName = $env:UserName
+$UserDomain = $env:UserDomain
+$ComputerName = $env:ComputerName
+
+<#
+    Cache
+#>
+$CacheScopeScript = ".\Cache\script.scope"

@@ -1,21 +1,35 @@
 param(
-    [string] $listTableFile = "downloadCosmosFileList.csv", 
-    [string] $localPath = "D:\01_Downloads\Temp\realtimebudgetingreport"
+    [datetime] $startDelta = [datetime]::parseexact("2019-12-05 01:00", 'yyyy-MM-dd HH:mm', $null),
+    #[datetime] $endDelta   = [datetime]::parseexact("2019-12-08 23:00", 'yyyy-MM-dd HH:mm', $null)
+    [datetime] $endDelta   = [datetime]::parseexact("2019-12-05 23:00", 'yyyy-MM-dd HH:mm', $null)
 )
 
 . "$PSScriptRoot\Lib\variables.ps1"
 . "$PSScriptRoot\Lib\functions.ps1"
 
-foreach ($line in Get-Content $listTableFile) {
-    if (!$line) 
-    {
-        continue;
-    }
+[datetime] $delta = $startDelta
+while ($delta -le $endDelta) {
+    $jobname = "HourlyMAIReport_" + $delta.ToString("yyyyMMddHHmm")
+    $deltaParam = $delta.ToString("yyyy-MM-ddTHH:mm:ss")
 
-    $filename = $line.Split("/")[-1];
-    $localFile = "$localPath\$filename";
+    $commandStr = "$ScopeRoot\ScopePreprocessor.exe submit" `
+                + " -i D:\Repos\Ads.BI.Mediation\target\distrib\debug\amd64\Autopilot\MFRLoader\Binaries\HourlyMAIReport.script" `
+                + " -vc https://cosmos11.osdinfra.net/cosmos/sharedData.Ads.Dev/" `
+                + " -f $jobname" `
+                + " -params Delta=\""$deltaParam\""" `
+                + " -params OutputPathRoot=\""local/users/minzlu/HourlyMAIReport/\""" `
+                + " -params DSVPathRoot=\""/local/prod/pipelines/Mediation/Contracts/\""" `
+                + " -params SAPathRoot=\""/local/prod/pipelines/Mediation/Facts/\""" `
+                + " -params ResourcePath=\""/local/prod/pipelines/Mediation/Views/\""" `
+                + " -params MonetizationViewPath=\""/shares/adCenter.BICore.SubjectArea/SubjectArea/Monetization/views/e2ephys\""" `
+                + " -params DataSet=\""Mobile\""" `
+                + " -params StagingArea=\""/local/twp\""" `
+                + " -maxUnavailability 0" `
+                + " -p 1500"
     
-    $ret_print = DownloadCosmosFile($line, $localFile);
-    Write-Output $ret_print
+    $ret = ProcessCommand $commandStr
+    PrintInfo $ret
+
+    $delta = $delta.AddHours(1)
 }
 

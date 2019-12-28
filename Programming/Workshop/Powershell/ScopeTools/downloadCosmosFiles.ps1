@@ -2,8 +2,8 @@ param(
     [string] $listTableFile = ".\Data\downloadCosmosFileList.csv"
 )
 
-. "$PSScriptRoot\Lib\variables.ps1"
-. "$PSScriptRoot\Lib\functions.ps1"
+Import-Module "$PSScriptRoot\Lib\variables.psm1"
+Import-Module "$PSScriptRoot\Lib\functions.psm1"
 
 foreach ($line in Get-Content $listTableFile) {
     if (!$line) 

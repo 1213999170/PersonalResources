@@ -9,6 +9,8 @@
 Programming/Workshop/Powershell/ScopeTools/History/
 Programming/Workshop/Powershell/ScopeTools/Cache/
 Programming/Workshop/Powershell/ScopeTools/Data/
+Programming/Workshop/Powershell/ScopeTools/temp.ps1
+*.vscode/
 Programming/Workshop/Python/_PyCharm_BaseProject/venv/
 
 # User-specific files (MonoDevelop/Xamarin Studio)

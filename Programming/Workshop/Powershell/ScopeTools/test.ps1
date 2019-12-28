@@ -4,8 +4,8 @@ param(
     [datetime] $endDelta   = [datetime]::parseexact("2019-12-05 23:00", 'yyyy-MM-dd HH:mm', $null)
 )
 
-. "$PSScriptRoot\Lib\variables.ps1"
-. "$PSScriptRoot\Lib\functions.ps1"
+Import-Module "$PSScriptRoot\Lib\variables.psm1"
+Import-Module "$PSScriptRoot\Lib\functions.psm1"
 
 [datetime] $delta = $startDelta
 while ($delta -le $endDelta) {

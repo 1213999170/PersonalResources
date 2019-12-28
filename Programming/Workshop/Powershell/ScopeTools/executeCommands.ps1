@@ -5,8 +5,8 @@ param(
     [timespan] $interval   = [timespan]::parse("0.01:00:00")
 )
 
-. "$PSScriptRoot\Lib\variables.ps1"
-. "$PSScriptRoot\Lib\functions.ps1"
+Import-Module "$PSScriptRoot\Lib\variables.psm1"
+Import-Module "$PSScriptRoot\Lib\functions.psm1"
 
 if (-not (Test-Path $commandTemplateFile)) {
     Write-Error "Can't find template file: $commandTemplateFile"

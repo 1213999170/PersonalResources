@@ -1,8 +1,14 @@
 <#
-    name:   variables.ps1
+    name:   variables.psm1
     usage:  store some useful constant variables.
 #>
 $TestMode = $false
+
+<#
+    Scope: Cosmos-related
+#>
+
+$VcClientDll = "E:\Resources\VcClient.dll"
 
 $VCMap = @{
     "11prod" = "https://cosmos11.osdinfra.net/cosmos/adCenter.BICore.prod2/"; 
@@ -35,6 +41,8 @@ function GetVC([string]$VCDescr) {
 <#
     Local paths
 #>
+$ScopeToolsRoot = $PSScriptRoot.Substring(0, $PSScriptRoot.IndexOf("ScopeTools") + "ScopeTools".Length)
+
 $ScopeRoot = "D:\Repos\Ads.BI.SubjectAreas\target\distrib\debug\amd64\Autopilot\ScopeSDK"
 $VSScopeRoot = """C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Extensions\Microsoft\ScopeStudio\2.5.0000.4\CosmosRuntimeSDK"""
 $ScopeExe = "$ScopeRoot\Scope.exe"
@@ -59,3 +67,30 @@ $ComputerName = $env:ComputerName
     Cache
 #>
 $CacheScopeScript = ".\Cache\script.scope"
+
+
+$ExportVariables = (
+    "TestMode", 
+    "VCMap", 
+    "ScopeToolsRoot", 
+    "ScopeRoot", 
+    "VSScopeRoot", 
+    "ScopeExe", 
+    "VcClientDll", 
+    "CommandHistoryFile", 
+    "CommandPrintHistoryFile", 
+    "PrintHistoryFile", 
+    "CookiesFile", 
+    "PathDelimiters", 
+    "ExtDelimiter", 
+    "UserName", 
+    "UserDomain", 
+    "ComputerName", 
+    "CacheScopeScript"
+)
+
+$ExportFunctions = (
+    "GetVC"
+)
+
+Export-ModuleMember -Variable $ExportVariables -Function $ExportFunctions

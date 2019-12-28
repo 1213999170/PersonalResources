@@ -4,8 +4,8 @@ param(
     [int] $Tokens = 10
 )
 
-. "$PSScriptRoot\Lib\functions.ps1"
-. "$PSScriptRoot\Lib\variables.ps1"
+Import-Module "$PSScriptRoot\Lib\variables.psm1"
+Import-Module "$PSScriptRoot\Lib\functions.psm1"
 
 # String Process (SStreamFile)
 $SStreamFile = RemoveEnd $SStreamFile "?property=info"

@@ -5,8 +5,15 @@
 Import-Module "$PSScriptRoot\init.psm1"
 
 # Functions
+function Get-PersonalResourcesRoot {
+    $KeyWord = "PersonalResources"
+    return $PSScriptRoot.Substring(0, $PSScriptRoot.IndexOf($KeyWord) + $KeyWord.Length)
+}
+
 function Enter-PowershellWorkshop {
-    Enter-Location "F:\PersonalResources\Programming\Workshop\Powershell"
+    $PersonalResourcesRoot = Get-PersonalResourcesRoot
+    $PowershellWorkshopPath = "$PersonalResourcesRoot\Programming\Workshop\Powershell"
+    Enter-Location $PowershellWorkshopPath
 }
 
 function Enter-Repos {

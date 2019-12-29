@@ -10,7 +10,9 @@ function Set-UserAlias ([string] $AliasName, [string] $CommandFunction) {
             return
         }
         Write-Warning "Resetting alias ""$AliasInfo"" from ""$($AliasInfo.Definition)"" to ""$CommandFunction"""
-        Remove-Alias $AliasName
+        if ($null -ne ((Get-Command) | Where-Object { $_.Name -eq "Remove-Alias" })) {
+            Remove-Alias $AliasName
+        }
     }
     Set-Alias $AliasName $CommandFunction -Option AllScope -Scope Global
 }

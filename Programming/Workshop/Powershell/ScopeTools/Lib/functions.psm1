@@ -37,6 +37,34 @@ function SparsePrintInfo([string] $logStr, [int] $interval = 100) {
     $Script:SparsePrintInfo_count += 1
 }
 
+function Assert-Statement([bool]$Statement, [string]$Description="") {
+    if (!$Statement) {
+        throw "Assert failed: $Description."
+    }
+}
+
+# MatchParams $Param1 $Param2 ([ref]$ScriptPath) ([ref]$VCDescr) "script"
+function MatchParams([string] $Param1, [string] $Param2, [ref] $ParamA, [ref] $ParamB, [string] $PatternA) {
+    if ([string]::IsNullOrEmpty($Param1)) {
+        return;
+    }
+    if ([string]::IsNullOrEmpty($Param2)) {
+        if ($Param1.Contains($PatternA)) {
+            $ParamA.Value = $Param1
+        }else {
+            $ParamB.Value = $Param1
+        }
+    }else {
+        if ($Param1.Contains($PatternA)) {
+            $ParamA.Value = $Param1
+            $ParamB.Value = $Param2
+        }else {
+            $ParamA.Value = $Param2
+            $ParamB.Value = $Param1
+        }
+    }
+}
+
 <#
     scope:  path / file name handling
 #>
@@ -311,6 +339,8 @@ $ExportFunctions = (
     "ProcessCommand",
     "PrintInfo",
     "SparsePrintInfo",
+    "Assert-Statement",
+    "MatchParams",
     "GetFileName",
     "GetFileNameWithoutExt",
     "GetPath",

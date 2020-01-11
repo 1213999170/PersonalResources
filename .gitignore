@@ -10,6 +10,8 @@ Programming/Workshop/Powershell/ScopeTools/History/
 Programming/Workshop/Powershell/ScopeTools/Cache/
 Programming/Workshop/Powershell/ScopeTools/Data/
 Programming/Workshop/Powershell/ScopeTools/temp.ps1
+Programming/Workshop/Powershell/ScopeTools/test.ps1
+Programming/Workshop/Powershell/ScopeTools/Cookies/
 *.vscode/
 Programming/Workshop/Python/_PyCharm_BaseProject/venv/
 

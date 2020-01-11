@@ -10,44 +10,10 @@ Import-Module "$PSScriptRoot\Lib\variables.psm1"
 Import-Module "$PSScriptRoot\Lib\functions.psm1"
 
 $Cookies = ConvertFrom-Json -InputObject (Get-Content $CookiesFile -Raw)
-$VCDescr    = ""
-$ScriptPath = ""
 
-if ($Param1 -eq "")
-{
-    $VCDescr    = $Cookies.VCDescr
-    $ScriptPath = $Cookies.ScriptPath
-    if ($VCDescr == "" -or $ScriptPath == "")
-    {
-        return
-    }
-}
-elseif ($Param2 -ne "")
-{
-    if ($Param1.Contains("script"))
-    {
-        $ScriptPath = $Param1
-        $VCDescr    = $Param2
-    }
-    else 
-    {
-        $VCDescr    = $Param1
-        $ScriptPath = $Param2
-    }
-}
-else
-{
-    if ($Param1.Contains("script"))
-    {
-        $ScriptPath = $Param1
-        $VCDescr    = $Cookies.VCDescr
-    }
-    else 
-    {
-        $VCDescr    = $Param1
-        $ScriptPath = $Cookies.ScriptPath
-    }
-}
+$VCDescr    = $Cookies.VCDescr
+$ScriptPath = $Cookies.ScriptPath
+MatchParams $Param1 $Param2 ([ref]$ScriptPath) ([ref]$VCDescr) "script"
 
 [string] $JobName = GetFileNameWithoutExt $ScriptPath
 [string] $VCName  = GetVC $VCDescr

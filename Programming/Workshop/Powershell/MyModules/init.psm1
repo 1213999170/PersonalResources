@@ -18,7 +18,11 @@ function Set-UserAlias ([string] $AliasName, [string] $CommandFunction) {
 }
 
 function Enter-Location ([string] $Path) {
-    Push-Location $Path
+    if ($Path -eq "-") {
+        Pop-Location
+    } else {
+        Push-Location $Path
+    }
 }
 
 # Alias

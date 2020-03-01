@@ -1,25 +1,36 @@
 #include "MyVector.h"
+#include "MyQueue.h"
 
-// get all squares less equal than n
-MyVector GetSquares(int n) {
-    MyVector a;
-    for (int i = 1; i <= n; ++i) {
-        if (i * i > n)
-            break;
-        a.push_back(i * i);
-    }
-    return a;
+#include <iostream>
+#include <vector>
+#include <set>
+#include <map>
+#include <stack>
+#include <ctime>
+#include <random>
+#include <algorithm>
+using namespace std;
+
+void displayVector(vector<int> &vec) {
+    //for (vector<int>::iterator iter = vec.begin(); iter < vec.end(); iter++)
+    //    cout << *iter << " ";
+    
+    for (int i = 0; i < vec.size(); ++i)
+        cout << vec[i] << " ";
+    cout << endl;
 }
 
 int main(int argc, char *argv[]) {
-    MyVector sq = GetSquares(100);
-
-    sq.pop_back();
-
-    for (int i = 0; i < sq.mSize; i++) {
-        cout << sq[i] << " ";
+    MyVector vec;
+    //srand(time(NULL));
+    for (int i = 0; i < 10; ++i) {
+        vec.push_back(rand() % 1000);
     }
-    cout << endl;
+
+    vec.display();
+    vec.sort();
+    vec.display();
+
 
     system("PAUSE");
     return 0;
